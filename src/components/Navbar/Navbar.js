@@ -1,6 +1,6 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
-import MyLogo from '../images/Framework_Computer_logo.svg'
+import MyLogo from "../images/Framework_Computer_logo.svg";
 import LoginWidget from "../LoginWidget/LoginWidget";
 
 const Navbar = () => {
@@ -10,11 +10,9 @@ const Navbar = () => {
         {/* Navigation --> */}
         <nav className="navbar navbar-expand-sm navbar-light bg-light m-3">
           <div className="container rounded-4">
-            <a className="navbar-brand" href="index.html">
-              {/* <img src={MyLogo} alt="" width="60" height="34" /> */}
+            <Link className="navbar-brand" to="/">
               <img src={MyLogo} alt="" width="200" height="80" />
-            </a>
-
+            </Link>
             <div style={{ float: "center" }}>
               <button
                 className="navbar-toggler"
@@ -29,34 +27,29 @@ const Navbar = () => {
               </button>
             </div>
             <div
-              className="collapse navbar-collapse "
+              className="collapse navbar-collapse justify-content-center"
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav ml-auto text-center fs-5">
-                <li className="nav-item active">
-                  <a className="nav-link" href="index.tml">
-                    Home
-                  </a>
-                </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="index.tml">
+                  <Link className="nav-link" to="/category/rick_and_morty">
                     Rick & Morty
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="index.tml">
-                    Gatitos
-                  </a>
+                  <Link className="nav-link" to="/category/star_wars">
+                    Star Wars
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="index.tml">
+                  <Link className="nav-link" to="/ofertas">
                     Ofertas Lighting
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="index.tml">
+                  <Link className="nav-link" to="/contacto">
                     Contacto
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
